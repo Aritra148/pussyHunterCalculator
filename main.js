@@ -20,12 +20,7 @@ showBuffer = () => {
 }
 
 showAnswer = () => {
-    if(point){
-        document.getElementById("output").innerHTML = lastResult.toFixed(3);
-    } else {
-        document.getElementById("output").innerHTML = lastResult.toFixed(0);
-    }
-    
+    document.getElementById("output").innerHTML = lastResult.toFixed(3);
 }
 
 
