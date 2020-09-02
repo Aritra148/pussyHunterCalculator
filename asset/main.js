@@ -61,8 +61,6 @@ addNumber = (num) => {
 }
 
 additionalOpperation = () => {
-    console.log(buffer);
-
     store = buffer;
     buffer = 0.0;
     point  = false;
@@ -77,8 +75,6 @@ additionalOpperation = () => {
 }
 
 subtractionOpperation = () => {
-    console.log(buffer);
-
     store = buffer;
     buffer = 0.0;
     point  = false;
@@ -93,8 +89,6 @@ subtractionOpperation = () => {
 }
 
 multipicationOpperation = () => {
-    console.log(buffer);
-
     store = buffer;
     buffer = 0.0;
     point  = false;
@@ -109,8 +103,6 @@ multipicationOpperation = () => {
 }
 
 divitionOpperation = () => {
-    console.log(buffer);
-
     store = buffer;
     buffer = 0.0;
     point  = false;
@@ -124,6 +116,7 @@ divitionOpperation = () => {
     }
 }
 
+console.log("Made By Error6251");
 // make the parfect result When it need.
 exicuteCommand = () => {
     store = buffer;
@@ -233,6 +226,7 @@ buttonAdd = () => {
     if(!pressedCommand){
         pressedCommand = true;
         additionalOpperation();
+        document.getElementById("output").innerHTML = "+";
     }
 }
 
@@ -240,6 +234,7 @@ buttonSub = () => {
     if(!pressedCommand){
         pressedCommand = true;
         subtractionOpperation();
+        document.getElementById("output").innerHTML = "-";
     }
 }
 
@@ -247,6 +242,7 @@ buttonMul = () => {
     if(!pressedCommand){
         pressedCommand = true;
         multipicationOpperation();
+        document.getElementById("output").innerHTML = "*";
     }
 }
 
@@ -254,6 +250,7 @@ buttonDiv = () => {
     if(!pressedCommand){
         pressedCommand = true;
         divitionOpperation();
+        document.getElementById("output").innerHTML = "/";
     }
 }
 
