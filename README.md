@@ -26,7 +26,7 @@ Made with HTML, CSS, Javascript
 
 [x] *.toFixed()* function is used for limiting the output numbers after decimal.
 
-[x] *exicuteCommand()* do all the calculations. _Opperation use for tracking the command that need to exicute.
+[x] *executeCommand()* do all the calculations. _Opperation use for tracking the command that need to exicute.
 
 [x] *addNumber()* is made for taking input data. If the input is a decimal number it will multiply the old number with 10 then add them. exmp: buffer = 12, input = 5 [ (buffer x 10)+input ] = (12 x 10)+5 = 125. if the buffer is already empty then it just add the input istade of mulpication. Float number will be added as [ buffer + input/(10 x floatPosition) ].
 

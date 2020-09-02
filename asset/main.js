@@ -67,7 +67,7 @@ additionalOpperation = () => {
     pressedEquel = false;
     
     if(command > 0 ){
-        exicuteCommand();
+        executeCommand();
     } else {
         answer = store;
         command = 1;
@@ -81,7 +81,7 @@ subtractionOpperation = () => {
     pressedEquel = false;
     
     if(command > 0 ){
-        exicuteCommand();
+        executeCommand();
     } else {
         answer = store;
         command = 2;
@@ -95,7 +95,7 @@ multipicationOpperation = () => {
     pressedEquel = false;
     
     if(command > 0 ){
-        exicuteCommand();
+        executeCommand();
     } else {
         answer = store;
         command = 3;
@@ -109,7 +109,7 @@ divitionOpperation = () => {
     pressedEquel = false;
     
     if(command > 0 ){
-        exicuteCommand();
+        executeCommand();
     } else {
         answer = store;
         command = 4;
@@ -118,7 +118,7 @@ divitionOpperation = () => {
 
 console.log("Made By Error6251");
 // make the parfect result When it need.
-exicuteCommand = () => {
+executeCommand = () => {
     store = buffer;
     buffer = 0;
 
@@ -142,7 +142,7 @@ exicuteCommand = () => {
 
 // Show result when '=' pressed
 lastShowingResult = () => {
-    exicuteCommand();
+    executeCommand();
     showAnswer();
     command = 0;
 }
