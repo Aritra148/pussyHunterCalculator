@@ -45,7 +45,7 @@ addNumber = (num) => {
         buffer += newNum;
         pointPos++;
     } else {
-        // look for 0 becouse its INT
+        // look for 0 because its INT
         if( buffer == 0 ){
             buffer = num;
         } else {
