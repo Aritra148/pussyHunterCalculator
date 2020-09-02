@@ -6,6 +6,8 @@ var store = 0.0;
 var command = 0;
 var point = false;
 var pointPos = 0;
+var pressedEquel = false;
+var pressedCommand = false;
 
 
 
@@ -52,6 +54,10 @@ addNumber = (num) => {
         }
     }
     
+    if(pressedEquel){
+        pressedEquel = false;
+        lastResult = 0;
+    }
 }
 
 additionalOpperation = () => {
@@ -60,6 +66,7 @@ additionalOpperation = () => {
     store = buffer;
     buffer = 0.0;
     point  = false;
+    pressedEquel = false;
     
     if(command > 0 ){
         exicuteCommand();
@@ -75,6 +82,7 @@ subtractionOpperation = () => {
     store = buffer;
     buffer = 0.0;
     point  = false;
+    pressedEquel = false;
     
     if(command > 0 ){
         exicuteCommand();
@@ -90,6 +98,7 @@ multipicationOpperation = () => {
     store = buffer;
     buffer = 0.0;
     point  = false;
+    pressedEquel = false;
     
     if(command > 0 ){
         exicuteCommand();
@@ -105,6 +114,7 @@ divitionOpperation = () => {
     store = buffer;
     buffer = 0.0;
     point  = false;
+    pressedEquel = false;
     
     if(command > 0 ){
         exicuteCommand();
@@ -114,7 +124,7 @@ divitionOpperation = () => {
     }
 }
 
-// make the parfect result When it need
+// make the parfect result When it need.
 exicuteCommand = () => {
     store = buffer;
     buffer = 0;
@@ -160,85 +170,107 @@ allClear = () => {
 //-----------------------------------------------------------------------------------------------------
 // Button Controll Function
 button0 = () => {
+    pressedCommand = false;
     addNumber(0);
     showBuffer();
 }
 
 button1 = () => {
+    pressedCommand = false;
     addNumber(1);
     showBuffer();
 }
 
 button2 = () => {
+    pressedCommand = false;
     addNumber(2);
     showBuffer();
 }
 
 button3 = () => {
+    pressedCommand = false;
     addNumber(3);
     showBuffer();
 }
 
 button4 = () => {
+    pressedCommand = false;
     addNumber(4);
     showBuffer();
 }
 
 button5 = () => {
+    pressedCommand = false;
     addNumber(5);
     showBuffer();
 }
 
 button6 = () => {
+    pressedCommand = false;
     addNumber(6);
     showBuffer();
 }
 
 button7 = () => {
+    pressedCommand = false;
     addNumber(7);
     showBuffer();
 }
 
 button8 = () => {
+    pressedCommand = false;
     addNumber(8);
     showBuffer();
 }
 
 button9 = () => {
+    pressedCommand = false;
     addNumber(9);
     showBuffer();
 }
 
 buttonAdd = () => {
-    additionalOpperation();
-    showBuffer();
+    if(!pressedCommand){
+        pressedCommand = true;
+        additionalOpperation();
+    }
 }
 
 buttonSub = () => {
-    subtractionOpperation();
-    showBuffer();
+    if(!pressedCommand){
+        pressedCommand = true;
+        subtractionOpperation();
+    }
 }
 
 buttonMul = () => {
-    multipicationOpperation();
-    showBuffer();
+    if(!pressedCommand){
+        pressedCommand = true;
+        multipicationOpperation();
+    }
 }
 
 buttonDiv = () => {
-    divitionOpperation();
-    showBuffer();
+    if(!pressedCommand){
+        pressedCommand = true;
+        divitionOpperation();
+    }
 }
 
 buttonDot = () => {
+    pressedCommand = false;
     point  = true;
     showBuffer();
 }
 
 buttonEql = () => {
+    pressedCommand = false;
+    pressedEquel = true;
     lastShowingResult();
 }
 
 buttonC = () => {
+    pressedCommand = false;
     allClear();
     showBuffer();
 }
