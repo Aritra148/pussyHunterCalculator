@@ -1,9 +1,8 @@
 // Variables
 var lastResult = 0.0;
 var buffer = 0.0;
-var answer = 0.0;
-var store = 0.0;
-var command = 0;
+var numbers = [];
+var command = [];
 var point = false;
 var pointPos = 0;
 var pressedEquel = false;
@@ -30,7 +29,6 @@ showAnswer = () => {
 //-----------------------------------------------------------------------------------------------------
 // Buffer Controll
 addNumber = (num) => {
-    
     // For pointer value including
     if(point){
         let divNum = 10;
@@ -61,98 +59,84 @@ addNumber = (num) => {
 }
 
 additionalOpperation = () => {
-    store = buffer;
+    command.push(1);
+    numbers.push(buffer);
+
     buffer = 0.0;
     point  = false;
     pressedEquel = false;
-    
-    if(command > 0 ){
-        executeCommand();
-    } else {
-        answer = store;
-        command = 1;
-    }
 }
 
 subtractionOpperation = () => {
+    command.push(2);
+    numbers.push(buffer);
+
     store = buffer;
     buffer = 0.0;
     point  = false;
     pressedEquel = false;
-    
-    if(command > 0 ){
-        executeCommand();
-    } else {
-        answer = store;
-        command = 2;
-    }
 }
 
 multipicationOpperation = () => {
+    command.push(3);
+    numbers.push(buffer);
+
     store = buffer;
     buffer = 0.0;
     point  = false;
     pressedEquel = false;
-    
-    if(command > 0 ){
-        executeCommand();
-    } else {
-        answer = store;
-        command = 3;
-    }
 }
 
 divitionOpperation = () => {
+    command.push(4);
+    numbers.push(buffer);
+
     store = buffer;
     buffer = 0.0;
     point  = false;
     pressedEquel = false;
-    
-    if(command > 0 ){
-        executeCommand();
-    } else {
-        answer = store;
-        command = 4;
-    }
 }
-
 console.log("Made By Error6251");
-// make the parfect result When it need.
-executeCommand = () => {
-    store = buffer;
-    buffer = 0;
 
-    switch(command){
-        case(1) : 
-            lastResult = (lastResult + answer) + store;
-            break;
-        case(2) : 
-            lastResult = (lastResult + answer) - store;
-            break;
-        case(3) : 
-            lastResult = (lastResult + answer) * store;
-            break;
-        case(4) : 
-            lastResult = (lastResult + answer) / store;
-            break;
+// make the parfect result.
+executeCommand = () => {
+    lastResult += numbers.shift();
+    
+    while(numbers.length > 0){
+        let store = numbers.shift();
+        let com = command.shift();
+        
+        switch(com) {
+            case 1:
+                lastResult += store;
+                break;
+            case 2:
+                lastResult -= store;
+                break;
+            case 3:
+                lastResult *= store;
+                break;
+            case 4:
+                lastResult /= store;
+                break;
+        }
     }
     console.log(lastResult);
-    store = 0;
 }
 
 // Show result when '=' pressed
 lastShowingResult = () => {
+    numbers.push(buffer);
+    buffer = 0;
     executeCommand();
     showAnswer();
-    command = 0;
 }
 
 // Clear all value for a fresh start
 allClear = () => {
-    command = 0;
-    answer = 0;
+    command = [];
+    numbers = [];
     buffer = 0;
-    store = 0;
     lastResult = 0;
     point = false;
     pointPos = 0;
