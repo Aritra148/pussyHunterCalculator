@@ -2,6 +2,7 @@
 A calculator for pussy level Noob Coders
 Made with HTML, CSS, Javascript
 
+![ScreenShort](asset/Capture.png)
 
 # Manual
 
