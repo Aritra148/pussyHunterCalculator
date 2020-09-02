@@ -2,7 +2,7 @@
 A calculator for pussy level Noob Coders
 Made with HTML, CSS, Javascript
 
-![ScreenShort](https://github.com/Error6251/pussyHunterCalculator/master/asset/Capture.png)
+![ScreenShort](https://github.com/Error6251/pussyHunterCalculator/blob/master/asset/Capture.PNG)
 
 # Manual
 
