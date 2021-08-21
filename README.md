@@ -4,7 +4,7 @@ A calculator for New JS Coders. Made with HTML, CSS & Javascript.
 
 # link for live view
 
-### **[Click_Me](git@github.com:Error6251/pussyHunterCalculator.git)**
+[Click_Me](git@github.com:Error6251/pussyHunterCalculator.git)
 
 ![ScreenShort](https://github.com/Error6251/pussyHunterCalculator/blob/master/asset/Capture.PNG)
 
