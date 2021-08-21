@@ -6,7 +6,7 @@ A calculator for New JS Coders. Made with HTML, CSS & Javascript.
 
 ### [Click_Me](https://error6251.github.io/pussyHunterCalculator/)
 
-![ScreenShort](https://github.com/Error6251/pussyHunterCalculator/blob/master/asset/Capture.PNG)
+![ScreenShort](https://github.com/Error6251/pussyHunterCalculator/blob/master/asset/Capture.png)
 
 # Know the code
 
